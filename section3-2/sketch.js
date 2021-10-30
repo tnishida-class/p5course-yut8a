@@ -20,6 +20,20 @@ function draw(){
   // 重力（コメント機能でオンオフ切り替えて実行してみましょう）
   vy = constrain(vy + g, -vyMax, vyMax);
 
+  if(keyIsDown(LEFT_ARROW)){ x -= 20; }
+  if(keyIsDown(RIGHT_ARROW)){ x += 20; }
+  if(keyIsDown(" ".charCodeAt(0))){
+    if(y < h / 2){ // 地面より上、つまり空中にいる
+    vy += g; // 下方向に重力の影響で加速する
+  }
+  else{
+    vy = 0;
+    y = h / 2;
+  }
+
+
+    }
+
   // 端の処理パターン (1) 反対側から出てくる
   // if(x > width){ x = 0; }
   // else if(x < 0){ x = width; }
