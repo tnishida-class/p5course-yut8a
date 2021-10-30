@@ -2,6 +2,9 @@
 let x, y, vx, vy;
 const g = 1; // 重力加速度
 const vyMax = 30;
+const jump = 20;
+const size = 20;
+const ground = 20;
 
 function setup(){
   createCanvas(windowWidth, windowHeight);
@@ -9,6 +12,7 @@ function setup(){
   y = height / 2;
   vx = 8;
   vy = 8;
+  h = height - ground - size / 2;
 }
 
 function draw(){
