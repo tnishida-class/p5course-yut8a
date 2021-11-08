@@ -3,7 +3,7 @@
 // 練習問題：何も操作しなくてもボールが湧いてくる機能を追加しよう
 
 let balls;
-
+let size;
 function setup(){
   createCanvas(windowWidth, windowHeight);
   balls = [];
@@ -23,9 +23,10 @@ function mouseDragged(){
   const dx = mouseX - pmouseX;
   const dy = mouseY - pmouseY;
   if(mag(dx, dy) > 5){
-    const b = { x: mouseX, y: mouseY, size: 20, vx: dx, vy: dy };
+    size = random(10,100);
+     b = { x: mouseX, y: mouseY, size, vx: dx, vy: dy };
     balls.push(b);
-  }
+   }
 }
 
 function windowResized(){
