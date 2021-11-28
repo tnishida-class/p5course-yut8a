@@ -1,6 +1,4 @@
 //　多角形がランダムに出現するプログラム
-
-
 let polygon;
 let size;
 function setup(){
